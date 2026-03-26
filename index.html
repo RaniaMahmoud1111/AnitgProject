@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="FreshMart - Your neighborhood online supermarket. Fresh groceries, fruits, vegetables delivered fast to your door." />
+  <title>FreshMart | Fresh Groceries Delivered Fast</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="header">
+    <div class="header-inner">
+
+      <!-- Logo -->
+      <a href="#" class="logo" id="logo-link" onclick="showSection('home')">
+        <span class="logo-icon">🛒</span>
+        <span class="logo-text">Fresh<span class="logo-accent">Mart</span></span>
+      </a>
+
+      <!-- Navigation -->
+      <nav class="nav" id="main-nav" aria-label="Main navigation">
+        <a href="#" class="nav-link active" id="nav-home"    onclick="showSection('home')">Home</a>
+        <a href="#" class="nav-link"        id="nav-products" onclick="showSection('products')">Products</a>
+        <a href="#" class="nav-link"        id="nav-cart"    onclick="showSection('cart')">Cart</a>
+      </nav>
+
+      <!-- Cart Icon Button -->
+      <button class="cart-btn" id="cart-icon-btn" aria-label="Open cart" onclick="showSection('cart')">
+        <svg class="cart-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="9" cy="21" r="1"></circle>
+          <circle cx="20" cy="21" r="1"></circle>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+        <span class="cart-count" id="cart-count">0</span>
+      </button>
+
+      <!-- Mobile Hamburger -->
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" onclick="toggleMobileMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Mobile Nav Drawer -->
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+      <a href="#" class="mobile-nav-link" onclick="showSection('home');    closeMobileMenu()">Home</a>
+      <a href="#" class="mobile-nav-link" onclick="showSection('products'); closeMobileMenu()">Products</a>
+      <a href="#" class="mobile-nav-link" onclick="showSection('cart');    closeMobileMenu()">Cart</a>
+    </nav>
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main class="main" id="main-content">
+
+    <!-- ========== HOME SECTION ========== -->
+    <section class="section" id="section-home">
+
+      <!-- Hero Banner -->
+      <div class="hero" id="hero-banner">
+        <div class="hero-content">
+          <span class="hero-badge">🌿 100% Fresh &amp; Organic</span>
+          <h1 class="hero-title">Grocery Shopping,<br /><span class="hero-highlight">Reimagined.</span></h1>
+          <p class="hero-subtitle">
+            Fresh fruits, vegetables, and daily essentials delivered straight to
+            your door — in under 60 minutes. Because freshness should never wait.
+          </p>
+          <div class="hero-actions">
+            <button class="btn btn-primary" id="shop-now-btn" onclick="showSection('products')">
+              Shop Now
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </button>
+            <button class="btn btn-outline" id="view-deals-btn" onclick="showSection('products')">View Deals</button>
+          </div>
+          <div class="hero-stats">
+            <div class="hero-stat"><span class="stat-num">500+</span><span class="stat-label">Products</span></div>
+            <div class="hero-stat"><span class="stat-num">50k+</span><span class="stat-label">Happy Customers</span></div>
+            <div class="hero-stat"><span class="stat-num">&lt;60min</span><span class="stat-label">Delivery</span></div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-circle"></div>
+          <div class="floating-items">
+            <span class="float-item fi-1">🍎</span>
+            <span class="float-item fi-2">🥦</span>
+            <span class="float-item fi-3">🥕</span>
+            <span class="float-item fi-4">🍋</span>
+            <span class="float-item fi-5">🍓</span>
+            <span class="float-item fi-6">🫐</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature Cards -->
+      <div class="features" id="features-section">
+        <div class="feature-card">
+          <div class="feature-icon">🚚</div>
+          <h3>Fast Delivery</h3>
+          <p>Get your groceries delivered in under 60 minutes, right to your door.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🌿</div>
+          <h3>100% Fresh</h3>
+          <p>We source directly from local farms so you always get the freshest produce.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💳</div>
+          <h3>Easy Payments</h3>
+          <p>Multiple secure payment options — pay how you want, when you want.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">♻️</div>
+          <h3>Eco Packaging</h3>
+          <p>All our packaging is 100% recyclable — good for you, great for the planet.</p>
+        </div>
+      </div>
+
+      <!-- CTA Banner -->
+      <div class="cta-banner" id="cta-banner">
+        <div class="cta-text">
+          <h2>Ready to shop smarter?</h2>
+          <p>Join thousands of happy customers who trust FreshMart every day.</p>
+        </div>
+        <button class="btn btn-primary" id="cta-shop-btn" onclick="showSection('products')">Browse Products</button>
+      </div>
+
+    </section>
+
+    <!-- ========== PRODUCTS SECTION ========== -->
+    <section class="section hidden" id="section-products">
+      <div class="section-header">
+        <h2 class="section-title">Our Products</h2>
+        <p class="section-subtitle">Handpicked freshness, delivered daily</p>
+        <!-- Search / Filter bar -->
+        <div class="filter-bar" id="filter-bar">
+          <input type="text" id="search-input" class="search-input" placeholder="🔍  Search products…" oninput="filterProducts()" aria-label="Search products" />
+          <div class="category-filters" id="category-filters" role="group" aria-label="Category filter">
+            <!-- Buttons injected by JS -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Grid -->
+      <div class="product-grid" id="product-grid">
+        <!-- Cards injected by JS -->
+      </div>
+    </section>
+
+    <!-- ========== CART SECTION ========== -->
+    <section class="section hidden" id="section-cart">
+      <div class="section-header">
+        <h2 class="section-title">Your Cart</h2>
+        <p class="section-subtitle" id="cart-subtitle">Review your items before checkout</p>
+      </div>
+
+      <!-- Empty Cart Message -->
+      <div class="empty-cart hidden" id="empty-cart-msg">
+        <div class="empty-cart-icon">🛒</div>
+        <h3>Your cart is empty!</h3>
+        <p>Add some fresh items before checking out.</p>
+        <button class="btn btn-primary" id="empty-cart-shop-btn" onclick="showSection('products')">Start Shopping</button>
+      </div>
+
+      <!-- Cart Content -->
+      <div class="cart-layout" id="cart-content">
+        <div class="cart-items" id="cart-items-list">
+          <!-- Cart items injected by JS -->
+        </div>
+
+        <!-- Order Summary -->
+        <div class="order-summary" id="order-summary">
+          <h3 class="summary-title">Order Summary</h3>
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <span id="summary-subtotal">$0.00</span>
+          </div>
+          <div class="summary-row">
+            <span>Delivery Fee</span>
+            <span id="summary-delivery">$2.99</span>
+          </div>
+          <div class="summary-row discount-row hidden" id="discount-row">
+            <span>Discount (10%)</span>
+            <span id="summary-discount" class="discount-value">-$0.00</span>
+          </div>
+          <div class="summary-divider"></div>
+          <div class="summary-row summary-total">
+            <span>Total</span>
+            <span id="summary-total">$0.00</span>
+          </div>
+
+          <div class="promo-box" id="promo-box">
+            <input type="text" id="promo-input" class="promo-input" placeholder="Promo code…" aria-label="Promo code" />
+            <button class="btn-promo" id="promo-apply-btn" onclick="applyPromo()">Apply</button>
+          </div>
+          <p class="promo-hint" id="promo-hint"></p>
+
+          <button class="btn btn-primary btn-checkout" id="checkout-btn" onclick="checkout()">
+            Proceed to Checkout
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </button>
+          <button class="btn btn-ghost" id="clear-cart-btn" onclick="clearCart()">Clear Cart</button>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ===== TOAST NOTIFICATION ===== -->
+  <div class="toast" id="toast" role="alert" aria-live="polite"></div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" id="main-footer">
+    <div class="footer-inner">
+      <div class="footer-logo">
+        <span class="logo-icon">🛒</span>
+        <span class="logo-text">Fresh<span class="logo-accent">Mart</span></span>
+      </div>
+      <p class="footer-copy">&copy; 2026 FreshMart. All rights reserved. Made with 💚 for fresh living.</p>
+      <div class="footer-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
